@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+}
+
+body{
+    background: hsl(27, 66%, 92%);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.container{
+
+    .bold-big{
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    >div{
+        margin-bottom: 1rem;
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+
+    .balance{
+        background:hsl(10, 79%, 65%);
+        display: flex;
+        justify-content: space-between;
+        color: hsl(33, 100%, 98%);
+        
+        .balance_amount{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .spending_total{
+        background: hsl(33, 100%, 98%);
+        .total{
+            .total_cal{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .total_last_month{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
