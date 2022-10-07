@@ -17,12 +17,11 @@ body{
 }
 
 .container{
-    margin:1rem;
 
     .bold-big{
         font-weight: 700;
         font-size: 1.5rem;
-        color: #000;
+        color: hsl(25, 47%, 15%);
     }
 
     .bold{
@@ -52,9 +51,17 @@ body{
 
     .spending_total{
         background: hsl(33, 100%, 98%);
+        .spending_chart{
+            margin: 1rem 0;
+        }
+        hr{
+            border:none;
+            background:  hsl(27, 66%, 92%);
+            padding: 0.1rem;
+        }
         .total{
             padding-top: 1rem;
-            color: gray;
+            color: hsl(28, 10%, 53%);
             .total_cal{
                 display: flex;
                 justify-content: space-between;

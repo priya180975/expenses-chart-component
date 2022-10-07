@@ -1,11 +1,4 @@
-// import data from './data.json' assert { type: 'JSON' };
-// console.log(data);
-
-
-
 const ctx = document.getElementById('chart').getContext('2d');
-
-
 fetch('./data.json')
     .then((response) => response.json())
     .then((data) => {
@@ -16,21 +9,38 @@ fetch('./data.json')
             return element.amount;
         });
         
+        Chart.defaults.font.family = "'DM Sans', sans-serif";        
+        Chart.defaults.font.size = 16;
         const myChart = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: labels,
                 datasets: [{
-                    label: '# of Votes',
+                    label: '',
                     data: data_values,
-                    backgroundColor: [
-                        'hsl(10, 79%, 65%)'
-                    ],
-                    borderRadius:5,
+                    backgroundColor:function(context) {
+                        if(context.raw==Math.max(...data_values))
+                        {
+                            return 'hsl(186, 34%, 60%)'
+                        }
+                        return 'hsl(10, 79%, 65%)'
+                    },
+                    borderRadius:4,
+                    borderSkipped:false,
                 }]
             },
             options: {
                 plugins:{
+                    tooltip: {
+                        displayColors: false,
+                        callbacks: {
+                            label: function(context) {
+                                return `$${context.raw}`
+                            },
+                            title:function(context) {
+                            }
+                        }
+                    },
                     legend:{
                         display:false,
                     }
@@ -46,6 +56,11 @@ fetch('./data.json')
                             drawBorder:false
                         }
                     }
+                },
+                onHover:(e,element)=>{
+                    element.length === 1 
+                    ? e.native.target.style.cursor = 'pointer'
+                    : e.native.target.style.cursor = 'default';
                 }
             }
         });        

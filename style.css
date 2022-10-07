@@ -22,14 +22,10 @@ body {
           align-items: center;
 }
 
-.container {
-  margin: 1rem;
-}
-
 .container .bold-big {
   font-weight: 700;
   font-size: 1.5rem;
-  color: #000;
+  color: #382314;
 }
 
 .container .bold {
@@ -71,9 +67,19 @@ body {
   background: #fffaf5;
 }
 
+.container .spending_total .spending_chart {
+  margin: 1rem 0;
+}
+
+.container .spending_total hr {
+  border: none;
+  background: #f8e9dd;
+  padding: 0.1rem;
+}
+
 .container .spending_total .total {
   padding-top: 1rem;
-  color: gray;
+  color: #93867b;
 }
 
 .container .spending_total .total .total_cal {
