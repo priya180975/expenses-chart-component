@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
   <title>Frontend Mentor | Expenses chart component</title>
 
@@ -33,13 +34,7 @@
         Spending - Last 7 days
       </div>
       <div class="spending_chart">
-      mon
-      tue
-      wed
-      thu
-      fri
-      sat
-      sun
+      <canvas id="chart" width="400" height="200"></canvas>
       </div>
       <hr>
       <div class="total">
@@ -47,7 +42,7 @@
         <div class="total_cal">
           <div class="total_amount bold-big">$478.33</div>
           <div class="total_last_month">
-          <span>+2.4%</span>
+          <span class="bold">+2.4%</span>
           <span>from last month</span>
           </div>
         </div>
@@ -60,5 +55,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+
+  <script src="script.js"></script>
 </body>
 </html>

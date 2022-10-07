@@ -12,15 +12,22 @@ body{
     background: hsl(27, 66%, 92%);
     display: flex;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
 }
 
 .container{
+    margin:1rem;
 
     .bold-big{
         font-weight: 700;
         font-size: 1.5rem;
+        color: #000;
+    }
+
+    .bold{
+        font-weight: 700;
+        color: #000;
     }
 
     >div{
@@ -33,17 +40,21 @@ body{
         background:hsl(10, 79%, 65%);
         display: flex;
         justify-content: space-between;
-        color: hsl(33, 100%, 98%);
         
         .balance_amount{
             display: flex;
             flex-direction: column;
+            span{
+                color: hsl(33, 100%, 98%) !important;
+            }
         }
     }
 
     .spending_total{
         background: hsl(33, 100%, 98%);
         .total{
+            padding-top: 1rem;
+            color: gray;
             .total_cal{
                 display: flex;
                 justify-content: space-between;

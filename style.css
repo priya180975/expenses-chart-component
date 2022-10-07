@@ -16,15 +16,25 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+.container {
+  margin: 1rem;
+}
+
 .container .bold-big {
   font-weight: 700;
   font-size: 1.5rem;
+  color: #000;
+}
+
+.container .bold {
+  font-weight: 700;
+  color: #000;
 }
 
 .container > div {
@@ -41,7 +51,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  color: #fffaf5;
 }
 
 .container .balance .balance_amount {
@@ -54,8 +63,17 @@ body {
           flex-direction: column;
 }
 
+.container .balance .balance_amount span {
+  color: #fffaf5 !important;
+}
+
 .container .spending_total {
   background: #fffaf5;
+}
+
+.container .spending_total .total {
+  padding-top: 1rem;
+  color: gray;
 }
 
 .container .spending_total .total .total_cal {
